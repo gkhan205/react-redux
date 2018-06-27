@@ -9,9 +9,10 @@ export const saveResult = (value) => {
 
 export const storeResult = (value) => {
     return function(dispatch){
+        // setTimeout() is used to demonstrate that how we can use asynchronous functions with redux using redux thunk middleware
         setTimeout(() => {
             dispatch(saveResult(value))
-        }, 2000);
+        }, 500);
     };
 };
 
